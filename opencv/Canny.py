@@ -1,0 +1,10 @@
+import cv2
+o = cv2.imread("xiaorao.jpg",cv2.IMREAD_GRAYSCALE)
+r1 = cv2.Canny(o,128,200)
+r2 = cv2.Canny(o,25,50)
+# cv2.imshow("original",o)
+# cv2.imshow("result1",r1)
+# cv2.imshow("result2",r2)
+cv2.imwrite("xr.png",r2)
+cv2.waitKey()
+cv2.destroyAllWindows()
